@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://caslab.csl.yale.edu/img/career.png">
-    <img src="https://caslab.csl.yale.edu/img/bg_black_logo.png" alt="Logo" width="80" height="80">
+    <img src="https://caslab.csl.yale.edu/img/bg_black_logo.png" alt="Logo">
   </a>
 
 <h3 align="center">Quantum Computers: Cosmic Ray Fingerprinting</h3>
