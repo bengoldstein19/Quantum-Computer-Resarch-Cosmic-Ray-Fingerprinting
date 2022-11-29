@@ -32,7 +32,7 @@ if __name__ == "__main__":
             null_counts[int(t)] += 1
     print(f"NULL_COUNTS: {null_counts}")
     fig, ax = plt.subplots()
-    ax.scatter(timestamps, values)
+    ax.plot(timestamps, values, linestyle='-')
     ax.set(xlabel=f'Time Since {datetime.datetime.fromtimestamp(start_timestamp)} (days)', ylabel='Geomagnetic Value', title='Geomagnetic Data Over Time (2022)')
     fig.savefig('plots/geomag_BRW_01-01-22-11-29-22_plot.png')
     plt.show()

@@ -70,11 +70,11 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <!-- <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li> -->
   </ol>
 </details>
 
@@ -109,28 +109,29 @@ Follow the following instructions to replicate the project locally:
 ### Prerequisites
 
 The following software is needed to run the scripts:
-* python 3.x
+* python 3.x:
   visit https://www.python.org/downloads/
-* matplotlib
-    ```pip install matplotlib```
-* qiskit
-    ```pip install qiskit```
+* matplotlib:
+    ```sh
+    pip install matplotlib
+    ```
+* qiskit:
+    ```sh
+    pip install qiskit
+    ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/bengoldstein19/Quantum-Computer-Resarch-Cosmic-Ray-Fingerprinting
    ```
-3. Install NPM packages
+2. Download Geomagnetic Data
    ```sh
-   npm install
+   wget https://geomag.usgs.gov/ws/data/?elements=H&endtime=YEAR-MONTH-DAYTHOUR:MINUTE:SECOND.000Z&format=json&id=NEW&sampling_period=60&starttime=YEAR-MONTH-DAYTHOUR:MINUTE:SECOND.000Z&type=adjusted -O OUTPUTFILEPATH
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+   Notably periods longer than 6 months are unsupported with once-per-minute sampling, so must be split into multiple files
+3. Modify file paths at top of parse_geomag.py to reflect OUTPUTFILEPATH used in wget
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,15 +140,15 @@ The following software is needed to run the scripts:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Running ```issue_jobs.py``` will issue 200 jobs at 15 minute intervals, and reap them. Note that the process takes ~2 days, so running on a laptop may be unfeasible. You then can download the job output via the API or using the web GUI. Then make sure you put all output json files in one folder, and change the ```ROOTDIR``` parameter at the top of parse results.py, as well as the dates in the filenames to reflect that of your jobs. Then, running ```parse_results.py``` will produce a csv and plot for the concatenated timeseries data. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+After downloading geomag data as shown above, ```parse_geomag.py``` will produce a plot of the results
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- ROADMAP -->
+<!-- ROADMAP
 ## Roadmap
 
 - [ ] Feature 1
@@ -161,7 +162,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 
 
-<!-- CONTRIBUTING -->
+<!-- CONTRIBUTING -- >
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -179,7 +180,7 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- LICENSE -->
+<!-- LICENSE -- >
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
@@ -188,7 +189,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- CONTACT -->
+<!-- CONTACT -- >
 ## Contact
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
@@ -199,20 +200,20 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 
 
-<!-- ACKNOWLEDGMENTS -->
+<!-- ACKNOWLEDGMENTS -- >
 ## Acknowledgments
 
 * []()
 * []()
 * []()
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+<!-- [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
 [contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
 [forks-url]: https://github.com/github_username/repo_name/network/members
@@ -223,7 +224,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/linkedin_username -->
 [product-screenshot]: https://qiskit.org/images/metal/hero/transmon.png
 [Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://python.org/
@@ -231,7 +232,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Qiskit-url]: https://qiskit.org/
 [Matplotlib]: https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black
 [Matplotlib-url]: https://matplotlib.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+<!-- [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [Svelte-url]: https://svelte.dev/
@@ -240,4 +241,4 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com  -->
