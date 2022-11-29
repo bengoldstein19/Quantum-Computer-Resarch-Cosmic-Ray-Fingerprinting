@@ -104,16 +104,17 @@ This repository contains code to issue qiskit circuit jobs (as well as reap them
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Follow the following instructions to replicate the project locally:
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+The following software is needed to run the scripts:
+* python 3.x
+  visit https://www.python.org/downloads/
+* matplotlib
+    ```pip install matplotlib```
+* qiskit
+    ```pip install qiskit```
 
 ### Installation
 

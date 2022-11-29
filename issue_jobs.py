@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 from qiskit import QuantumCircuit, IBMQ, transpile
 from time import sleep
 

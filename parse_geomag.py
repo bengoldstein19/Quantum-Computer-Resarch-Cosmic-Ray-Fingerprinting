@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 import json
 import datetime
 import matplotlib.pyplot as plt
