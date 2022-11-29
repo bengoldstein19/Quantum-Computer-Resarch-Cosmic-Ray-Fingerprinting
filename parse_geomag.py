@@ -2,7 +2,7 @@ import json
 import datetime
 import matplotlib.pyplot as plt
 
-GEOMAG_FILES=["/Users/benjamingoldstein/Desktop/Desktop/Coding/EENG468/GEOMAGDATA_01:01:22-06:01:22.json", "/Users/benjamingoldstein/Desktop/Desktop/Coding/EENG468/GEOMAGDATA_06:01:22-11:29:22.json"]
+GEOMAG_FILES=["geomag_data/GEOMAGDATA_BRW_01:01:22-06:01:22.json", "geomag_data/GEOMAGDATA_BRW_06:01:22-11:29:22.json"]
 
 if __name__ == "__main__":
     timestamps = []
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     ax.scatter(timestamps, values)
     ax.set(xlabel=f'Time Since {datetime.datetime.fromtimestamp(start_timestamp)} (days)', ylabel='Geomagnetic Value', title='Geomagnetic Data Over Time (2022)')
-    fig.savefig('geomag_plot.png')
+    fig.savefig('plots/geomag_BRW_01-01-22-11-29-22_plot.png')
     plt.show()
 
     

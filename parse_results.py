@@ -67,9 +67,9 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     ax.scatter([p[0] for p in points], [p[1] for p in points])
     ax.set(xlabel=f'Time Since {datetime.datetime.fromtimestamp(start_time)} (s)', ylabel='Error Count', title='Error Counts vs Time')
-    fig.savefig("jobs_plot_11-20-22.png")
+    fig.savefig("plots/jobs_plot_11-20-22.png")
     print(f"COUNTS: {counts}")
-    with open("results.csv", "w") as file:
+    with open("parsed_data/jobs_11-20-22_results.csv", "w") as file:
         file.write("timestamp,errorcount,,errorcount_val,errorcount_freq,,startdate\n")
         file.write(f"{points[0][0]},{points[0][1]},,0,{counts[0]},,{datetime.datetime.fromtimestamp(start_time)}\n")
         for i in range(1,6):

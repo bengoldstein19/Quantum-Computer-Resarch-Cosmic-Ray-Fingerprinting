@@ -85,7 +85,7 @@
 
 [![Qiskit Chip Screenshot][product-screenshot]](https://docs.google.com/document/d/1kOVv-K8UWa4Ji7KQqA6T3-YowAEXcCy6hc9RnAIAE2A/edit#)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This repository contains code to issue qiskit circuit jobs (as well as reap them on finish), and to parse the output into a results.csv file along with a timeseries plot. It also contains code to parse geomagnetic data downloaded from ,<a href="https://geomag.usgs.gov/plots">geomag.usgs.gov</a>, which in this case was downloaded from the Barrow observatory in Alaska, and the Newport observatory in Rhode Island.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,14 +93,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Python][Python]][Python-url]
+* [![Qiskit][Qiskit]][Qiskit-url]
+* [![Matplotlib][Matplotlib]][Matplotlib-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -229,12 +224,12 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: https://qiskit.org/images/metal/hero/transmon.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
+[Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[Python-url]: https://python.org/
+[Qiskit]: https://img.shields.io/badge/Qiskit-%236929C4.svg?style=for-the-badge&logo=Qiskit&logoColor=white
+[Qiskit-url]: https://qiskit.org/
+[Matplotlib]: https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black
+[Matplotlib-url]: https://matplotlib.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
