@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/bengoldstein19/Quantum-Computer-Resarch-Cosmic-Ray-Fingerprinting">
-    <img src="https://caslab.csl.yale.edu/img/career.png" alt="Logo">
+    <img src="https://caslab.csl.yale.edu/img/career.png" alt="Logo" height="80" width="80">
   </a>
 
 <h3 align="center">Quantum Computers: Cosmic Ray Fingerprinting</h3>
