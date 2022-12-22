@@ -2,10 +2,11 @@
 
 from qiskit import QuantumCircuit, IBMQ, transpile
 from time import sleep
+import os
 
 TOTAL_JOBS = 8 # total number of jobs to execute
 INTERVAL = 5 #interval (minutes) at which to run/reap jobs
-TOKEN = "71ae5003e021b05322d6aecd73e2ab63500cebcc5e1e73801c5586e0a1f8e7eea45c0507cd8767e290f174b37b412706276ef60f4c0dc4ec4a20ea2d83f392fc"
+TOKEN = os.environ.get('IBMQ_TOKEN')
 
 if __name__ == "__main__":
     #MARK: define QuantumCircuit
