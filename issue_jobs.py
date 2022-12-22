@@ -2,6 +2,7 @@
 
 from qiskit import QuantumCircuit, IBMQ, transpile
 from time import sleep
+import datetime
 import os
 
 TOTAL_JOBS = 100 # total number of jobs to execute
@@ -42,9 +43,8 @@ if __name__ == "__main__":
         for job in jobs:
             if (job.done()):
                 print(job.result())
-                with open(f"jobs_12-22-22/{job.job_id()}.json", "w") as f:
+                with open(f"jobs_{datetime.datetime.now().strftime('%d/%m/%y')}/{job.job_id()}.json", "w") as f:
                     f.write(job.result())
-
                 jobs.remove(job)
         if num_jobs < TOTAL_JOBS:
             job = backend.run(transpiled_circuit, memory=True)
