@@ -4,14 +4,16 @@ from qiskit import QuantumCircuit, IBMQ, transpile
 from time import sleep
 import os
 
-TOTAL_JOBS = 8 # total number of jobs to execute
-INTERVAL = 5 #interval (minutes) at which to run/reap jobs
+TOTAL_JOBS = 100 # total number of jobs to execute
+INTERVAL = 0.1 #interval (minutes) at which to run/reap jobs
+
+
 TOKEN = os.environ.get('IBMQ_TOKEN')
 
 if __name__ == "__main__":
     #MARK: define QuantumCircuit
     circuit = QuantumCircuit(7)
-    circuit.x([2 * i for i in range(3)])
+    circuit.x([0, 2, 3, 4, 6])
     circuit.measure_all()
 
     jobs = set()
@@ -39,7 +41,10 @@ if __name__ == "__main__":
     while(len(jobs) > 0):
         for job in jobs:
             if (job.done()):
-                print(job.result().get_memory())
+                print(job.result())
+                with open(f"jobs_12-22-22/{job.job_id()}.json", "w") as f:
+                    f.write(job.result())
+
                 jobs.remove(job)
         if num_jobs < TOTAL_JOBS:
             job = backend.run(transpiled_circuit, memory=True)
