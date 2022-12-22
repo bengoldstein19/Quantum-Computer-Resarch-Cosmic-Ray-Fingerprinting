@@ -9,8 +9,8 @@ TOKEN = "71ae5003e021b05322d6aecd73e2ab63500cebcc5e1e73801c5586e0a1f8e7eea45c050
 
 if __name__ == "__main__":
     #MARK: define QuantumCircuit
-    circuit = QuantumCircuit(3)
-    circuit.x(range(3))
+    circuit = QuantumCircuit(7)
+    circuit.x([2 * i for i in range(3)])
     circuit.measure_all()
 
     jobs = set()
